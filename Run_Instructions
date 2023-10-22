@@ -1,0 +1,4 @@
+1) Excute SQL script in SQL DB
+2) Open the solution in VS 2019 or later 
+3) Clean & Rebuild
+4) publish the solution on IIS or press F5 to start debugging and see the result 
