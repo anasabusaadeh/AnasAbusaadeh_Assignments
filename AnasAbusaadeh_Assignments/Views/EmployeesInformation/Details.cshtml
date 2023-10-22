@@ -1,0 +1,89 @@
+﻿@model AnasAbusaadeh_Assignments.Models.EmployeesInformation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EmployeesInformation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Department)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BasicSal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BasicSal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalSal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalSal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mflg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mflg)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

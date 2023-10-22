@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <style>
+        .tableErr{
+            margin-top:25px;
+            padding-top:25px;
+        }
+        .imgWarnng {
+            max-width: 90%;
+        }
+
+        .alert {
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+           /* position: relative;
+            display: flex;*/
+            align-items: center;
+        }
+
+            .alert:hover {
+                background-color: white;
+            }
+
+            .alert strong {
+                padding-right: 10px;
+            }
+
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 0;
+            color: rgb(59, 59, 59);
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .fa,
+        .fas {
+            margin-right: 10px;
+        }
+
+        .success {
+            background-color: #d0fae4;
+            color: #219870;
+        }
+
+            .success:hover {
+                background-color: #b8fbd8;
+                color: #219870;
+            }
+
+        .info {
+            background-color: #dbeaff;
+            color: #4f8adf;
+        }
+
+            .info:hover {
+                background-color: #bdd5f7;
+                color: #4f8adf;
+            }
+
+        .warning {
+            background-color: #fef3c6;
+            color: #d5812b;
+            padding: 25px;
+            font-size: 17px;
+        }
+
+            .warning:hover {
+                background-color: #fcedb2;
+                color: #d5812b;
+            }
+
+        .danger {
+            background-color: #fee2e1;
+            color: #c53239;
+        }
+
+            .danger:hover {
+                background-color: #fbd3d1;
+                color: #c53239;
+            }
+
+        .fa-check-circle,
+        .fas fa-check-circle {
+            color: #4CAF50;
+        }
+
+        .fa-info-circle,
+        .fas fa-info-circle {
+            color: #2196F3;
+        }
+
+        .fa-exclamation-triangle,
+        .fas fa-exclamation-triangle {
+            color: #ff9800;
+        }
+
+        .fa-times-circle,
+        .fas fa-times-circle {
+            color: #f44336;
+        }
+
+        .closebtn:hover {
+            color: black;
+        }
+
+
+
+        .fa,
+        .fas {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Manage Employees Information", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "EmployeesInformation")</li>
+                    <li>@Html.ActionLink("Upload Multible EmployeesInfo", "UploadEmployeesInfoExcel", "EmployeesInformation")</li>
+                    @*<li>@Html.ActionLink("Create", "Create", "EmployeesInformation")</li>*@
+                    @*<li>@Html.ActionLink("Details", "Details", "EmployeesInformation")</li>
+        <li>@Html.ActionLink("Edit", "Edit", "EmployeesInformation")</li>
+        <li>@Html.ActionLink("Delete", "Delete", "EmployeesInformation")</li>*@
+
+                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application : Anas Abusaadeh</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

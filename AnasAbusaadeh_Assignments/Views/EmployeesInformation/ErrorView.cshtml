@@ -1,0 +1,86 @@
+﻿
+@model IEnumerable<AnasAbusaadeh_Assignments.Models.EmployeesInformation>
+
+
+
+<div class="tableErr">
+   
+
+    <div class="alert danger">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">
+            <i class="fas fa-times"></i>
+        </span>
+        <i class="fas fa-times-circle"></i>
+        <strong>Validation Error !</strong>
+        <span class="alert-des"> Your Excel data contains an invalid format. Please review and correct the format of the employee information below, and then try the operation again :</span>
+    </div>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Info_Validation.ExcelRowNumber)
+            </th>
+            <th>
+                isValid @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                isValid @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                isValid @Html.DisplayNameFor(model => model.DOB)
+            </th>
+            <th>
+                isValid   @Html.DisplayNameFor(model => model.DOH)
+            </th>
+            <th>
+                isValid   @Html.DisplayNameFor(model => model.Department)
+            </th>
+            <th>
+                isValid  @Html.DisplayNameFor(model => model.BasicSal)
+            </th>
+            <th>
+                isValid  @Html.DisplayNameFor(model => model.TotalSal)
+            </th>
+            <th>
+                isValid  @Html.DisplayNameFor(model => model.Mflg)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Info_Validation.ExcelRowNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Info_Validation.isValid_Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Info_Validation.isValid_Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Info_Validation.isValid_DOB)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Info_Validation.isValid_DOH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Info_Validation.isValid_Department)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Info_Validation.isValid_BasicSal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Info_Validation.isValid_TotalSal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Info_Validation.isValid_Mflg)
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</div>
+

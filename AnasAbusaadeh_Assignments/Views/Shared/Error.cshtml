@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+</head>
+<body>
+
+
+    <div class="alert danger">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">
+            <i class="fas fa-times"></i>
+        </span>
+        <i class="fas fa-times-circle"></i>
+        <strong> Application Error !</strong>
+        <span class="alert-des">Sorry, an error occurred while processing your request.</span>
+
+
+        @Html.ActionLink("Go Back To Home Page", "Index", "EmployeesInformation")
+    </div>
+
+
+    
+</body>
+</html>

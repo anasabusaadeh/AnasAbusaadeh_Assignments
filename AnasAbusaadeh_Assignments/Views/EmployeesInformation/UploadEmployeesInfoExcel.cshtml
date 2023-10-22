@@ -1,0 +1,57 @@
+﻿@model AnasAbusaadeh_Assignments.Models.EmployeesInformation
+
+@{
+    ViewBag.Title = "Upload EmployeesInfo Excel";
+}
+
+<h2>Upload EmployeesInfo ExcelSheet</h2>
+
+
+@using (Html.BeginForm("UploadEmployeesInfoExcel", "EmployeesInformation", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+<div >
+
+
+    <div class="alert warning">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">
+            <i class="fas fa-times"></i>
+        </span>
+        <i class="fas fa-exclamation-triangle"></i>
+        <strong>Warning!</strong>
+        <span class="alert-des">
+            Please make sure that all your excel data contains data with valid data format with same columns order as belwo example:
+        </span>
+        <img src="~/Styles/Images/warning msg.PNG" class="alert warning imgWarnng" />
+
+
+
+    </div>
+
+
+    <div class="form-group">
+        <label for="file">Select Excel File:</label>
+        <input type="file" name="file" class="form-control-file" />
+    </div>
+
+
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </div>
+
+
+    @*<div class="form-group">
+            @Html.ActionLink("Back to List", "Index")
+
+        </div>*@
+
+</div>
+
+        }
+       
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }
